@@ -16,23 +16,24 @@ struct ContentView: View {
     var body: some View {
         
         ZStack {
-            Color(red: 100/255, green: 130/255, blue: 200/255)
+            Color(red: 233/255, green:233/255, blue: 233/255)
                 .edgesIgnoringSafeArea(.all)
             
             VStack {
                 Spacer()
                 Image("protocol1")
-                Text("Welcome to the Pre-Alpha")
+                    .padding(.top, 30)
+                Text("Welcome to the Alpha")
                     .foregroundColor(Color(red: 0/255, green: 0/255, blue: 0/255))
                     .font(.system(size: 15))
                     .multilineTextAlignment(.center)
-                    .padding(.top, 5)
+                    .padding(.top, 0)
                 Text("Sign In")
-                    .foregroundColor(.white)
+                    .foregroundColor(.black)
                     .font(.system(size: 25))
                     .fontWeight(.semibold)
                     .multilineTextAlignment(.center)
-                    .padding(.top, 70)
+                    .padding(.top, 0)
                 TextField("Username", text: $username)
                     .frame(width: 300, height: 45)
                     .background(Color(.white))
@@ -61,33 +62,21 @@ struct ContentView: View {
                         .padding(13)
                         .frame(width: 250, height: 45)
                         .foregroundColor(.white)
-                        .background(Color(red: 102/255, green: 98/255, blue: 227/255))
+                        .background(Color(red: 179/255, green: 0/255, blue: 30/255))
                         .cornerRadius(22)
                         .font(.system(size: 15))
-                }
-                Button(action: {
-                    print("Sign Up")
-                }) {
-                    Text("Sign Up")
-                        .foregroundColor(.white)
-                        .padding(.top, 15)
+                    
                 }
                 Spacer()
-                
-                /*This text for some reason won't allow the Server Button possiblly becasuse of the padding or Spacer() above
-                
-                Text("If you sign in you will agree with our User Agreement")
-                    .foregroundColor(.white)
-                    .multilineTextAlignment(.center)
-                    .font(.system(size: 13))*/
             }
         }
-            
-    }
-}
+            }
+        }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .previewInterfaceOrientation(.landscapeRight)
     }
 }
