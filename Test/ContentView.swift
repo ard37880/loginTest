@@ -73,7 +73,10 @@ struct ContentView: View {
                         .padding(.top, 15)
                 }
                 Spacer()
-                /*Text("If you sign in you will agree with our User Agreement")
+                
+                /*This text for some reason won't allow the Server Button possiblly becasuse of the padding or Spacer() above
+                
+                Text("If you sign in you will agree with our User Agreement")
                     .foregroundColor(.white)
                     .multilineTextAlignment(.center)
                     .font(.system(size: 13))*/
