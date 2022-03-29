@@ -11,6 +11,7 @@ struct ContentView: View {
     
     @State var username: String = ""
     @State var password: String = ""
+    @State var server: String = ""
     
     var body: some View {
         
@@ -46,6 +47,13 @@ struct ContentView: View {
                     .font(Font.system(size: 16))
                     .multilineTextAlignment(.center)
                     .cornerRadius(22)
+                TextField("Server", text: $server)
+                    .frame(width: 300, height: 45)
+                    .background(Color(.white))
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .font(Font.system(size: 16))
+                    .multilineTextAlignment(.center)
+                    .cornerRadius(22)
                 Button(action: {
                     print("User is logging in")
                 }) {
@@ -60,15 +68,15 @@ struct ContentView: View {
                 Button(action: {
                     print("Sign Up")
                 }) {
-                    Text("Sign In")
+                    Text("Sign Up")
                         .foregroundColor(.white)
                         .padding(.top, 15)
                 }
                 Spacer()
-                Text("If you sign in you will agree with our User Agreement")
+                /*Text("If you sign in you will agree with our User Agreement")
                     .foregroundColor(.white)
                     .multilineTextAlignment(.center)
-                    .font(.system(size: 13))
+                    .font(.system(size: 13))*/
             }
         }
             
